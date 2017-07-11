@@ -1,0 +1,42 @@
+'use strict';
+
+var Sequelize = require('sequelize');
+var connection = require('./connection');
+
+var Inventory = connection.define('inventory', {
+    inventoryNo: {
+        type: Sequelize.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
+    },
+    category: {
+        type: Sequelize.INTEGER
+    },
+    item: {
+        type: Sequelize.STRING
+    },
+    brand: {
+        type: Sequelize.STRING
+    },
+    model: {
+        type: Sequelize.STRING
+    },
+    serialNo: {
+       type: Sequelize.STRING
+    },
+    description: {
+        type: Sequelize.TEXT
+    },
+    location: {
+        type: Sequelize.INTEGER
+    },
+    status: {
+        type: Sequelize.STRING
+    }
+},
+    {
+        timestamps: false,
+        tableName: 'inventory'
+    });
+
+module.exports = Inventory;

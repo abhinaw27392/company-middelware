@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Leaves </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- Fonts -->
+    <!-- Lato -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Responsive Stylesheet -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Include Required Prerequisites -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
+    <!-- Include Date Range Picker -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+
+</head>
+
+<body id="body">
+
+    <div id="preloader">
+        <div class="book">
+            <div class="book__page"></div>
+            <div class="book__page"></div>
+            <div class="book__page"></div>
+        </div>
+    </div>
+
+    <!-- 
+Header start
+==================== -->
+
+    <div class="navbar-default navbar-fixed-top animated" id="navigation">
+        <div class="icon-bar" style="float:left; margin-top:6px;" title="Home">
+<a class="active" href="success.html"><i class="fa fa-home" style="font-size:40px;color:#7B68EE"></i>
+</a>
+</div>
+<div class="icon-bar" style="float:right; margin-top:6px; padding-left: 10px;" title="Logout">
+<a class="active" href="index.html"><i class="fa fa-sign-out" style="font-size:40px;color:#7B68EE"></i>
+</a>
+</div>
+<div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+        <a class="navbar-brand" href="#">
+            <img class="logo-1" src="" alt="">
+            <img class="logo-2" src="app/assets/images/logo1.png" alt="LOGO">
+
+        </a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <nav class="collapse navbar-collapse" id="navbar">
+        <ul class="nav navbar-nav navbar-right" id="top-nav">
+            <li class="current"><a href="#body">Apply</a></li>
+            <li><a href="#hero-area4">Cancel</a></li>
+            <li><a href="#hero-area1">Holiday Calendar</a></li>
+            <li><a href="#hero-area2">Leave Details</a></li>
+            <li><a href="#hero-area3">Compensatory Credit</a></li>
+        </ul>
+    </nav>
+    <!-- /.navbar-collapse -->
+</div>
+<!-- /.container-fluid -->
+</div>
+
+<section id="hero-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="block">
+                    <h1 class="wow fadeInDown">About The App </h1><br>
+                    <p class="wow fadeInDown" data-wow-delay="0.3s">This page consolidates your leaves and compensatory off's. You can use the app to view the Company Holiday
+                        Calendar, View/Modify and Apply Leaves through a weekly Calendar.</p>
+                </div>
+            </div>
+            <div class="col-md-6 wow zoomIn">
+                <div class="block">
+                    <div class="counter text-center" style="float:right">
+                        <table>
+                            <tr><th>Leave Type:</th>
+                            
+                                <td>
+                                    <select style="float:left; width:190px;">
+<option value="Select Leave Type" selected>Select Leave Type</option>
+<option value="Annual Leave">Annual Leave</option>
+<option value="Sick Leave">Sick Leave</option>
+<option>--------------------------------------------</option>
+<option value="Compensatory Leave">Compensatory Leave</option>
+<option value="Maternity Leave">Maternity Leave</option>
+<option value="Leave Without Pay">Leave Without Pay</option>
+</select>
+</td>
+</tr>
+<tr>
+    <td>
+        </br>
+    </td>
+</tr>
+<tr>
+<th>Select Date(s) </th></tr>
+   <tr> <td>
+        <label for="fromdate" style="float:left; padding-right: 10px;">From:</label></td>
+<td><input type="date" style="float:left; width:190px"/></td> 
+</tr>
+<tr>
+    <td>
+        <label for="todate" style="float:left;  padding-right: 28px;">To:</label></td>
+<td><input type="date" style="float:left; width:190px"/></td>
+</tr>
+<tr>
+    <td>
+        </br>
+    </td>
+</tr>
+<!--<tr style="float:left;"> --><tr>
+<td>
+    <label style="float:left;">Reason:</label></td>
+    <td>
+        <textarea type="text area" style="float:left;width:190px;"></textarea>
+</td>
+</tr>
+<tr>
+    <td>
+        </br>
+    </td>
+</tr>
+</table>
+
+<table>
+    <tr>
+        <td><label> Duration:</label></td>
+
+        <td>
+            <div class="onoffswitch">
+                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                <label class="onoffswitch-label" for="myonoffswitch">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+             </label>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <th>Contact:</th>
+        <td>
+            <input type="text" class="form-control" style="width:190px; margin-left:30px">
+</td>
+</tr>
+</table>
+<tr>
+    <td>
+        </br>
+    </td>
+</tr>
+<table align="center">
+    <tr>
+        <td><input type="submit" value="RESET" /></td>
+        <td style="padding-left:25px"> <input type="submit" value="SUBMIT" /></td>
+</tr>
+</table>
+
+</div>
+</div>
+</div>
+</div>
+<!-- .row close -->
+</div>
+<!-- .container close -->
+</section>
+<!-- header close -->
+<section clas="wow fadeInUp">
+    <div class="map-wrapper">
+    </div>
+</section>
+
+<section style="padding:50px" id="hero-area4">
+<div class="container">
+    <div class="block">
+        <h1 class="wow fadeInDown">Cancel Leave(s)</h1><br>
+    </div>
+    <div id="divCancel" align="center">
+        </br>
+        </br>
+        <table>
+            <tr>
+                <tr>
+                    <td>
+                        <label style="padding-right: 10px;"><b>Cancel Leave(s):</label> <label style="padding-right:350px"><b>Set some date value</label></td>
+		</tr>
+		 <tr>
+        </tr>
+        <td style="padding-left:130px"> <input type="submit" value="Apply" /></br>
+</br>
+</td>
+</tr>
+<tr>
+    <td>
+        <div id="noCancel">
+            <p style="float:left"><strong>Info! </strong>No Leave details found for Cancellation.</p>
+</br>
+</br>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</br>
+</br>
+</div>
+</section>
+
+<!-- 
+About start
+==================== -->
+<section id="hero-area1">
+    <div class="container">
+        <div class="block">
+            <h1 class="wow fadeInDown">Holiday Calendar</h1><br>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-default btn-submit" type="submit" style="padding: 14px 90px;">26 Jan, 2017 (Thursday)</br>Republic Day</button>
+<button class="btn btn-default btn-submit" type="submit" style="padding: 14px 90px;">13 Mar, 2017 (Monday)</br>Holi *</button>
+<button class="btn btn-default btn-submit" type="submit" style="padding: 14px 90px;">29 Mar, 2017 (Wednesday)</br>Ugadi/Gudi Padwa *</button>
+<button class="btn btn-default btn-submit" type="submit" style="padding: 14px 90px;">14 Apr, 2017 (Friday)</br>Good Friday *</button>
+<button class="btn btn-default btn-submit" type="submit" style="padding: 14px 90px;">01 May, 2017 (Monday)</br>May Day</button>
+<button class="btn btn-default btn-submit" type="submit" style="padding: 14px 90px;">15 Aug, 2017 (Tuesday)</br>Independence Day</button>
+<button class="btn btn-default btn-submit" type="submit" style="padding: 14px 90px;">25 Aug, 2017 (Friday)</br>Ganesh Chaturthi</button>
+<button class="btn btn-default btn-submit" type="submit" style="padding: 14px 90px;">29 Sep, 2017 (Friday)</br>Maha Navami/Navratra</button>
+<button class="btn btn-default btn-submit" type="submit" style="padding: 14px 90px;">02 Oct, 2017 (Monday)</br>Mahatma Gandhi Jayanti</button>
+<button class="btn btn-default btn-submit" type="submit" style="padding: 14px 90px;">19 Oct, 2017 (Thursday)</br>Deepavali/Bali Padyam</button>
+<button class="btn btn-default btn-submit" type="submit" style="padding: 14px 90px;">20 Oct, 2017 (Friday)</br>Govardhan Puja</button>
+<button class="btn btn-default btn-submit" type="submit" style="padding: 14px 90px;">01 Nov, 2017 (Wednesday)</br>Karnataka Rajyotsava</button>
+<button class="btn btn-default btn-submit" type="submit" style="padding: 14px 90px;">25 Dec, 2017 (Monday)</br>Christmas</button>
+</br>
+</br>
+<p><strong>Info! </strong>Holiday(s) marked with * are Restricted Holidays.</br>
+    Out of three Restricted Holidays, you can avail only one. Please let your leads know in advance if you want to avail it.</p>
+
+</div>
+</div>
+</section>
+<!-- 
+About start
+==================== -->
+<!-- 
+About start
+==================== -->
+<section id="hero-area2">
+    <div class="container">
+        <div class="block">
+            <h1 class="wow fadeInDown">Leave Details</h1><br>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-default btn-submit" id="myBtn1" type="submit" style="padding: 14px 450px;" onclick= 'functionMmodal("myModal1","close1")'>Leave Details</button>
+<div id="myModal1" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close" id="close1">&times;</span>
+            <table align="center">
+                <tr>
+                    <td><label><h2>Leave Balance:&nbsp</h2></label></td>
+                    <td><select>
+<option value="Select Leave Type" selected>01-JAN-2017 to 31-DEC-2017</option>
+<option value="Annual Leave">01-JAN-2016 to 31-DEC-2016</option>
+<option value="Sick Leave">01-JAN-2015 to 31-DEC-2015</option>
+</select>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                        <div class="form-group">
+                            <button class="btn btn-default btn-submit" type="submit" style="padding-right: 15px;">GO</button>
+</div>
+<tr>
+    </table>
+
+    <button class="btn btn-default btn-submit" style="padding: 5px 500px;" onclick='functionAnnual("divAnnual","divAnnualOpt")'><b>Annual Leave Details</b></button>
+<option id="divAnnualOpt" style="text-indent: -2em " class="fa fa-chevron-right" aria-hidden="true"></option>
+<div id="divAnnual" align="center">
+    </br>
+    </br>
+    <table>
+        <tr>
+            <tr>
+                <td>
+                    <label style="padding-right: 10px;"><b>Opening Balance:</label> <label style="padding-right:350px"><b>Set some int</label></td>
+		<td><label style="padding-right: 10px;"><b>Leaves Lapsed:</label> <label><b>Set some int</label></td>
+		</tr>
+	   <tr> <td><label style="padding-right: 10px;"><b>Leaves Earned:</label> <label><b>Set some int</label></td>
+	   <td><label style="padding-right: 10px;"><b>Leaves Balance:</label> <label><b>Set some int</label></td></tr>
+	   <tr> <td><label style="padding-right: 10px;"><b>Total Leaves:</label> <label><b>Set some int</label></td>
+	   <td><label style="padding-right: 10px;"><b>Leaves Availed:</label> <label><b>Set some int</label></td></tr>
+		</tr></table>
+</div></br></br>
+<button class="btn btn-default btn-submit" style="padding: 5px 508px;" onclick='functionAnnual("divSick","divSickOpt")'><b>Sick Leave Details</b></button>
+<option id="divSickOpt" style="text-indent: -2em " class="fa fa-chevron-right" aria-hidden="true"></option>
+<div id="divSick" style="display:none;" align="center">
+<table>
+    <tr>
+        </br>
+        </br>
+        <tr>
+            <td>
+                <label style="padding-right: 10px;"><b>Start Date:</label> <label style="padding-right:400px"><b>Set some int</label></td>
+		<td><label style="padding-right: 10px;"><b>Leaves Earned:</label> <label><b>Set some int</label></td>
+		</tr><tr><td><label style="padding-right: 10px;"><b>End Date:</label> <label><b>Set some int</label></td>
+		<td><label style="padding-right: 10px;"><b>Total Leaves:</label> <label><b>Set some int</label></td>
+		</tr>
+	   <tr> <td><label style="padding-right: 10px;"><b>Opening Balance:</label> <label><b>Set some int</label></td>
+	   <td><label style="padding-right: 10px;"><b>Leaves Balance:</label> <label><b>Set some int</label></td></tr>
+	   <tr> <td><label style="padding-right: 10px;"><b>Leaves Lapsed:</label> <label><b>Set some int</label></td>
+	   <td><label style="padding-right: 10px;"><b>Leaves Availed:</label> <label><b>Set some int</label></td></tr>
+		</tr></table>
+</div> </br></br> </br></br> </br>
+</div>
+<footer>
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<p style="float:left"><strong>Info! </strong>Based on the Leaves availed, <label><b>int value</b></label>leave may lapse by the end of the year.</p>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+<div class="form-group">
+    <button class="btn btn-default btn-submit" id="myBtn1" type="submit" style="padding: 14px 450px;" onclick= 'functionMmodal("myModal3","close3")'>Leave Transactions</button>
+<div id="myModal3" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close" id="close3">&times;</span>
+            <table align="center">
+                <tr>
+                    <td><label><h2>Leave Transactions:&nbsp</h2></label></td>
+                    <td><select>
+<option value="Select Leave Type" selected>01-JAN-2017 to 31-DEC-2017</option>
+<option value="Annual Leave">01-JAN-2016 to 31-DEC-2016</option>
+<option value="Sick Leave">01-JAN-2015 to 31-DEC-2015</option>
+</select>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                        <div class="form-group">
+                            <button class="btn btn-default btn-submit" type="submit" style="padding-right: 15px;">GO</button>
+</div>
+<tr>
+    </table>
+
+    <button class="btn btn-default btn-submit" style="padding: 5px 500px;"onclick='functionAnnual("divTransact","divTransactOpt")'><b>LeaveType: FromDate-ToDate:Status</b></button>
+<option id="divTransactOpt"
+    style="text-indent: -2em " class="fa fa-chevron-right" aria-hidden="true"></option>
+<div id="divTransact" align="center">
+    </br>
+    </br>
+    <table>
+        <tr>
+            <tr>
+                <td>
+                    <label style="padding-right: 10px;"><b>Requested On:</label> <label style="padding-right:350px"><b>Set some Date</label></td></tr>
+		<tr><td><label style="padding-right: 10px;"><b>From Date:</label> <label><b>Set some Date</label></td>
+		</tr>
+	   <tr> <td><label style="padding-right: 10px;"><b>To Date:</label> <label><b>Set some Date</label></td></tr>
+	   <tr><td><label style="padding-right: 10px;"><b>Reason:</label> <label><b>Set some Reason</label></td></tr>
+		</tr></table>
+</div></br></br>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+<!-- 
+About start
+==================== -->
+
+<!-- 
+About start
+==================== -->
+<section style="padding:50px" id="hero-area3">
+<div class="container">
+    <div class="block">
+        <h1 class="wow fadeInDown">Compensatory Off</h1><br>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-default btn-submit" id="myBtn2" type="submit" style="padding: 14px 450px;" onclick= 'functionMmodal("myModal2","close2")'>Compensatory Leave Details</button>
+<div id="myModal2" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close" id="close2">&times;</span>
+            <button class="btn btn-default btn-submit" style="padding: 5px 500px;"onclick="functionAnnual()"><b>Compensatory Balance:</b></button>
+<option id="divCompoffOpt" style="text-indent: -2em " class="fa fa-chevron-right" aria-hidden="true"></option>
+<div id="divCompoff" align="center">
+    </br>
+    </br>
+    <table>
+        <tr>
+            <tr>
+                <td>
+                    <label style="padding-right: 10px;"><b>Compensatory Credit(s):</label> <label style="padding-right:350px"><b>Set some int value</label></td>
+		</tr>
+		 <tr>
+        </tr>
+	   <tr> <td><label style="padding-right: 10px;"><b>Compensatory Leaves Earned:</label> <label><b>You don't have any pending Compensatory Credits</label></br></br></td>
+       </tr>
+        <td style="padding-left:525px"> <input type="submit" value="Apply" /></td>
+</tr>
+</table>
+</div>
+</br>
+</br>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p style="float:left"><strong>Info! </strong>Once the Compensatory off is credited, it has to be availed with in 60 days of approval.</p>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://arrow.scrolltotop.com/arrow28.js"></script>
+
+<!-- 
+About start
+==================== -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block">
+                    <p>Copyright &copy; <a href="http://www.ahinfotech.com">AH Infotech</a>| All right reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Js -->
+<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+<script src="js/vendor/jquery-1.10.2.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script src="js/jquery.lwtCountdown-1.0.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/jquery.form.js"></script>
+<script src="js/jquery.nav.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+
+</html>

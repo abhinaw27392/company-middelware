@@ -1,0 +1,20 @@
+import { Injectable } from '@angular/core';
+
+var request = require('request');
+
+@Injectable()
+export class DataService {
+    constructor() {
+
+    }
+
+    getPath(uri: string) {
+        return request('http://localhost:4200' + uri, function (error: Object, response: Object, body: Object) {
+            if (error) {
+                return error;
+            } else {
+                return body;
+            }
+        });
+    }
+}

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Leaves </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- Fonts -->
+    <!-- Lato -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Responsive Stylesheet -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Include Required Prerequisites -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
+    <!-- Include Date Range Picker -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+
+</head>
+
+<body id="body">
+
+    <div id="preloader">
+        <div class="book">
+            <div class="book__page"></div>
+            <div class="book__page"></div>
+            <div class="book__page"></div>
+        </div>
+    </div>
+
+    <!-- 
+Header start
+==================== -->
+
+    <div class="navbar-default navbar-fixed-top animated" id="navigation">
+        <div class="icon-bar" style="float:left; margin-top:6px;" title="Home">
+<a class="active" href="success.html"><i class="fa fa-home" style="font-size:40px;color:#7B68EE"></i>
+</a>
+</div>
+<div class="icon-bar" style="float:right; margin-top:6px; padding-left: 10px;" title="Logout">
+<a class="active" href="index.html"><i class="fa fa-sign-out" style="font-size:40px;color:#7B68EE"></i>
+</a>
+</div>
+<div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+        <a class="navbar-brand" href="#">
+            <img class="logo-1" src=" " alt="">
+            <img class="logo-2" src="app/assets/images/logo1.png" alt="LOGO">
+
+        </a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+
+    <!-- /.navbar-collapse -->
+</div>
+<!-- /.container-fluid -->
+</div>
+
+<section id="hero-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block">
+                    <h1 class="wow fadeInDown">My Assets </h1><br>
+                    <p class="wow fadeInDown" data-wow-delay="0.3s">This page consolidates all the assets you own with the particulars & location of that specific asset.</p>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-default btn-submit" id="myBtn1" type="submit" style="padding: 14px 50px; margin: 8px 4px;"><b>Total Number of Assets: &nbsp;<label id ="totalAssetCount">0</b></label>
+</button>
+<button class="btn btn-default btn-submit" id="myBtn2" type="submit" style="padding: 14px 50px; margin: 8px 4px;" onclick= 'functionMmodal("myModalAssetUndeclared","closeAssetUndeclared")'><b>Undeclared Assets:&nbsp; <label id="undeclaredCount">0</b></label>
+</button>
+<button class="btn btn-default btn-submit" id="myBtn2" type="submit" style="padding: 14px 50px; margin: 8px 4px;" onclick= 'functionMmodal("myModalAssetDeclared","closeAssetDeclared"); insertDynamicDivs("declaredAssetCount")'><b>Declared Assets:&nbsp; <label id= "declaredAssetCount" >4</b></label>
+</button>
+<button class="btn btn-default btn-submit" id="myBtn2" type="submit" style="padding: 14px 50px; margin: 8px 4px;" onclick= 'functionMmodal("myModalAddAsset","closeAddAsset")'><i class="fa fa-plus" aria-hidden="true" style="font-size:20px;color:#7B68EE; text-indent: -2em;"></i><b>&nbsp;Add Assets</button>
+<div id="myModalAssetUndeclared" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close" id="closeAssetUndeclared">&times;</span>
+
+            <div id="divAssetUndeclared">
+                <table align="center">
+                    <div>
+                        <h2 class="wow fadeInDown" style="text-align: Center; margin-right:300px;">
+<u>Undeclared Assets</u>
+</h2><br>
+</div>
+<tr>
+    <tr>
+        <td>
+            <label style="padding-right: 10px;"><b>Category:</label> <label style="padding-right:350px"><b>Category here</label></br></br></td>
+		</tr>
+	   <tr> <td><label style="padding-right: 10px;"><b>Serial Number:</label> <label><b>Number</label></br></br></td>
+       </tr>
+	   <tr> <td><label style="padding-right: 10px;"><b>Asset Description:</label> <label><b>Description</label></br></br></td>
+       </tr>
+	   <tr> <td><label style="padding-right: 10px;"><b>Location:</label> <label><b>Location</label></br></br></td>
+       </tr>
+        </tr>
+</table>
+</div>
+</br>
+</br>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p style="float:left"><strong>Info! </strong>The assets which you haven't declared in Declared asssets section, but if you are using any asset(s)
+gets displayed here.</p>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+<div id="myModalAssetDeclared" class="modal" style="overflow-y: scroll;">
+
+    <!-- Modal content -->
+    <div class="modal-content" id="dynamicIdContainer">
+        <span class="close" id="closeAssetDeclared">&times;</span>
+        <div class="modal-header" id="dynamicId" align="center">
+            
+            <button class="btn btn-default btn-submit" style="padding: 5px 500px;" onclick='functionAnnual("divAssetDeclared","divAssetOpt")'><b>Declared Assets:</b><span id="assetNumber"><b>&nbsp;1</span></button>
+<i class="fa fa-laptop" aria-hidden="true" style="text-indent: -60em" title="Laptop"></i>
+<i class="fa fa-desktop" aria-hidden="true" style="text-indent: -58em" title="Desktop"></i>
+<i class="fa fa-level-down" aria-hidden="true" style="text-indent: -56em" title="Input Device"></i>
+<i class="fa fa-level-up" aria-hidden="true" style="text-indent: -54em" title="Output Device"></i>
+<i class="fa fa-align-center" aria-hidden="true" style="text-indent: -52em" title="Accesories"></i>
+<i class="fa fa-wifi" aria-hidden="true" style="text-indent: -50em" title="Connectivity Device"></i>
+<i class="fa fa-hdd-o" aria-hidden="true" style="text-indent: -48em" title="Storage Device"></i>
+<option id="divAssetOpt" style="text-indent: -7em " class="fa fa-chevron-right" aria-hidden="true"></option>
+<div id="divAssetDeclared" style="display:none;">
+    <table align="center">
+        <tr>
+            <tr>
+                <td>
+                    </br>
+                    <label style="padding-right: 10px;"><b>Category:</label> <label><b>Category here</label></br></br>
+</td>
+<td></br><label style="padding-right: 10px; padding-left:30px;"><b>Item Type:</label> <label><b>ItemType here</label></br></br>
+</td>
+  		</tr>
+		 <tr>
+        </tr>
+	   <tr> <td><label style="padding-right: 10px;"><b>Serial Number:</label> <label><b>Number</label></br></br></td>
+       <td><label style="padding-right: 10px; padding-left:30px;"><b>Asset Number:</label> <label><b>Number</label></br></br></td>
+       </tr>
+       <tr> <td><label style="padding-right: 10px;"><b>Brand:</label> <label><b>name</label></br></br></td>
+       <td><label style="padding-right: 10px; padding-left:30px;"><b>Model:</label> <label><b>Model Number</label></br></br></td>
+       </tr>
+	   <tr> <td><label style="padding-right: 10px;"><b>Asset Description:</label> <label><b>Description</label></br></br></td>
+       <td><label style="padding-right: 10px; padding-left:30px;"><b>Asset Status:</label> <label><b>status</label></br></br></td>
+       </tr>
+	   <tr> <td><label style="padding-right: 10px;"><b>Cubicle Number:</label> <label><b>number</label></br></br></td>
+           <td><label style="padding-right: 10px; padding-left:30px;"><b>Location:</label> <label><b>Location</label></br></br></td>
+       </tr>
+ 
+     <tr><td>
+    <input type="radio" name="usingIt" value="usingIt" id="usingIt"  onclick = 'hideandseek("false","secondaryUserDiv")' checked="true">
+<label for="usingIt">I am Using it.</label></td>
+</tr>
+
+<tr>
+    <td>
+        <input type="radio" name="usingIt" value="ChangeUser" id="ChangeUser" onclick='hideandseek("true","secondaryUserDiv")'>
+<label for="ChangeUser">Change Primary / Secondary User.&nbsp;&nbsp;</label></td>
+<td>
+    <div id="secondaryUserDiv" style="float:left; display: none;" ><input type="text" id="secondaryUser" style="color:gray; float:left;" placeholder="Employee ID">&nbsp;&nbsp;<input type="submit" value="Submit" /></td>
+</div>
+</td>
+</tr>
+
+<tr>
+    <td>
+        <input type="radio" name="usingIt" value="notUsing" id="notUsing" onclick='hideandseek("false","secondaryUserDiv")'>
+<label for="notUsing">This Asset is Not in Use.</label></td>
+</tr>
+
+</td>
+</tr>
+</tr>
+
+</table>
+</div>
+</br>
+</br>
+</div>
+<div id ="dynamicIdContainerBox" align="center" style="background:rgba(0, 0, 0, 0) linear-gradient(135deg, #8ec64e 0%, #41aba0 100%) repeat scroll 0 0;"> </div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p style="float:left"><strong>Info! </strong>The assets which you have declared gets displayed here. You also have the provision to declare more
+than one asset.</p>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+<div id="myModalAddAsset" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close" id="closeAddAsset">&times;</span>
+            <button class="btn btn-default btn-submit" style="padding: 5px 500px;" onclick='functionAnnual("divAddAsset","divAddAssetOpt")'><b>Add Assets:</b></button>
+<i class="fa fa-laptop" aria-hidden="true" style="text-indent: -25em" title="Laptop"></i>
+<i class="fa fa-desktop" aria-hidden="true" style="text-indent: -28em" title="Desktop"></i>
+<i class="fa fa-level-down" aria-hidden="true" style="text-indent: -23em" title="Input Device"></i>
+<i class="fa fa-level-up" aria-hidden="true" style="text-indent: -27em" title="Output Device"></i>
+<i class="fa fa-align-center" aria-hidden="true" style="text-indent: -22em" title="Accesories"></i>
+<i class="fa fa-wifi" aria-hidden="true" style="text-indent: -18em" title="Connectivity Device"></i>
+<i class="fa fa-hdd-o" aria-hidden="true" style="text-indent: -20em" title="Storage Device"></i>
+<option id="divAddAssetOpt" style="text-indent: -4em " class="fa fa-chevron-right" aria-hidden="true"></option>
+<div id="divAddAsset">
+    </br>
+    <table cellspacing="50">
+        <tr>
+            <td width="5%">
+                <label><b>Category:</label></td>
+            <td width="20%" align="left">
+                <select>
+<option value="SystemType" selected>System Type</option>
+<option value="Input Devices">Input Devices</option>
+<option value="Output devices">Output devices</option>
+<option value="Storage Devices">Storage Devices</option>
+<option value="Accessories">Accessories</option>
+<option value="Connectivity Devices">Connectivity Devices</option>
+</select><br></br>
+            </td>
+            <td width="5%"><label><b>Item Type:</label></td>
+            <td width="20%" align="left">
+                <select>
+<option value="Laptop" selected>Laptop</option>
+<option value="Desktop">Desktop</option>
+<option value="Wired-Keyboard">Wired-Keyboard</option>
+<option value="Wireless-Keyboard">Wireless-Keyboard</option>
+<option value="Wired-Mouse">Wired-Mouse</option>
+<option value="Wireless-Mousee">Wireless-Mouse</option>
+<option value="Speakers">Speakers</option>
+<option value="Projector">Projector</option>
+<option value="Mick-Headphone">Mick-Headphone</option>
+<option value="Headphone">Headphone</option>
+<option value="Laptop Dock">Laptop Dock</option>
+<option value="Locker">Locker</option>
+<option value="RAM">RAM</option>
+<option value="External Harddrivee">External Harddrive</option>
+<option value="Data Card">Data Card</option>
+</select><br></br>
+            </td>
+            <br></br>
+        </tr>
+
+
+
+        <tr>
+            <td width="5%"><label><b>Serial Number:</label></td>
+            <td width="20%" align="left">
+                <input type=t ext placeholder="Enter Serial Number" style="color:gray"/></br>
+</br>
+</td>
+<td width="5%"><label><b>Asset Number:</label></td>
+<td width="20%" align="left">
+    <input type=t ext placeholder="Enter Asset Number" style="color:gray"/></br>
+</br>
+</td>
+</tr>
+<tr>
+    <td width="5%"><label><b>Brand:</label></td>
+    <td width="20%" align="left">
+        <input type=t ext placeholder="Enter Brand name" style="color:gray"/></br>
+</br>
+</td>
+<td width="5%"><label><b>Model:</label> </td>
+<td width="20%" align="left">
+    <input type=t ext placeholder="Enter Model Number" style="color:gray"/></br>
+</br>
+</td>
+</tr>
+<tr>
+    <td width="5%"><label><b>Asset Description:</label></td>
+    <td width="20%" align="left">
+        <input type=t ext placeholder="Enter Description" style="color:gray"/></td>
+<td width="5%"><label><b>Allocation Date:</label></td>
+<td width="20%" align="left">
+    <input type="date" style="color:grey;" placeholder="dd/mm/yyyy" /> </br>
+</br>
+</td>
+</tr>
+<tr>
+    <td width="5%"><label><b>Cubicle Number:</label> </td>
+    <td width="20%" align="left">
+        <input type=t ext placeholder="Enter Cubicle Number" style="color:gray"/></br>
+</br>
+</td>
+<td width="5%"><label><b>Location Details:</label> </td>
+<td width="20%" align="left"> <textarea rows="1" cols="30" placeholder="Enter Location Details" style="color:gray"></textarea></br>
+    </br>
+</td>
+</tr>
+
+</tr>
+</tr>
+
+</table>
+<table align="right" width="50%">
+    <tr><br></br>
+        <td><input type="submit" value="RESET" /></td>
+        <td style="padding-left:25px"> <input type="submit" value="SUBMIT" /></td>
+</tr>
+</table>
+</div>
+</br>
+</br>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p style="float:left"><strong>Info! </strong>The assets which you have received and not declared, can be added here. Once the asset(s) is added,
+added asset(s) will appear in the declared assets section.</p>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+<!-- .row close -->
+</div>
+<!-- .container close -->
+</section>
+<!-- header close -->
+<section clas="wow fadeInUp">
+    <div class="map-wrapper">
+    </div>
+</section>
+
+<!-- 
+About start
+==================== -->
+
+<!-- 
+About start
+==================== -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block">
+                    <p>Copyright &copy; <a href="http://www.ahinfotech.com">AH Infotech</a>| All right reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Js -->
+<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+<script src="js/vendor/jquery-1.10.2.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script src="js/jquery.lwtCountdown-1.0.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/jquery.form.js"></script>
+<script src="js/jquery.nav.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+
+</html>
